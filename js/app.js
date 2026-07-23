@@ -97,15 +97,6 @@ function searchDomain() {
     }
 
 
-    /*
-       Kullanıcı şunları yazabilir:
-
-       mete
-       mete.com
-       www.mete.com
-       https://mete.com
-    */
-
     domainName =
         domainName
             .toLowerCase()
@@ -280,6 +271,112 @@ function addToCart(
         " sepete eklendi! 🎉",
 
         "success"
+
+    );
+
+
+    /*
+       Kullanıcı giriş yaptıysa
+       domaini direkt hesabına ekle
+    */
+
+    saveDomainToUser(
+        domain
+    );
+
+}
+
+
+/* =========================================
+   SAVE DOMAIN TO USER
+========================================= */
+
+function saveDomainToUser(
+    domain
+) {
+
+
+    const loggedIn =
+        localStorage.getItem(
+            "meteninhoLoggedIn"
+        );
+
+
+    if (
+        loggedIn !== "true"
+    ) {
+
+        return;
+
+    }
+
+
+    const user =
+        JSON.parse(
+
+            localStorage.getItem(
+                "meteninhoUser"
+            )
+
+        );
+
+
+    if (!user) {
+
+        return;
+
+    }
+
+
+    if (!user.domains) {
+
+        user.domains = [];
+
+    }
+
+
+    if (
+        user.domains.includes(
+            domain
+        )
+    ) {
+
+        return;
+
+    }
+
+
+    user.domains.push(
+        domain
+    );
+
+
+    localStorage.setItem(
+
+        "meteninhoUser",
+
+        JSON.stringify(
+            user
+        )
+
+    );
+
+
+    setTimeout(
+
+        function () {
+
+            showNotification(
+
+                "Domainin dashboard'a eklendi! 🌐",
+
+                "success"
+
+            );
+
+        },
+
+        500
 
     );
 
