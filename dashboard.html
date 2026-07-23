@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Dashboard | Meteninho Domains
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+<body class="dashboard-page">
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a
+            href="index.html"
+            class="logo">
+
+            <div class="logo-mark">
+                M
+            </div>
+
+            <div class="logo-text">
+
+                <strong>
+                    METENINHO
+                </strong>
+
+                <span>
+                    DOMAINS
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <nav class="desktop-menu">
+
+            <a href="index.html">
+                Ana Sayfa
+            </a>
+
+            <a
+                href="dashboard.html"
+                class="active">
+                Dashboard
+            </a>
+
+            <a href="domains.html">
+                Domainler
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <div class="user-mini">
+
+                <div
+                    class="user-avatar"
+                    id="userAvatar">
+
+                    M
+
+                </div>
+
+
+                <div class="user-mini-info">
+
+                    <strong
+                        id="userName">
+
+                        Kullanıcı
+
+                    </strong>
+
+                    <small>
+                        Hesabım
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="logout-btn"
+                id="logoutButton">
+
+                Çıkış
+
+            </button>
+
+        </div>
+
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton">
+
+            ☰
+
+        </button>
+
+    </header>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu">
+
+        <a href="index.html">
+            Ana Sayfa
+        </a>
+
+        <a
+            href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="domains.html">
+            Domainler
+        </a>
+
+        <div class="mobile-menu-line"></div>
+
+        <a
+            href="#"
+            id="mobileLogoutButton">
+
+            Çıkış Yap
+
+        </a>
+
+    </div>
+
+
+    <!-- DASHBOARD -->
+
+    <main class="dashboard-container">
+
+
+        <section class="dashboard-welcome">
+
+            <div>
+
+                <span class="dashboard-label">
+                    KONTROL MERKEZİ
+                </span>
+
+
+                <h1>
+
+                    Hoş geldin,
+
+                    <span id="welcomeName">
+                        Kullanıcı
+                    </span>
+
+                    👋
+
+                </h1>
+
+
+                <p>
+
+                    Domainlerini ve hesabını
+                    buradan yönetebilirsin.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="dashboard-add-button">
+
+                + Domain Ara
+
+            </a>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <section class="dashboard-stats">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🌐
+                </div>
+
+
+                <div>
+
+                    <small>
+                        TOPLAM DOMAIN
+                    </small>
+
+
+                    <strong
+                        id="domainCount">
+
+                        0
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🟢
+                </div>
+
+
+                <div>
+
+                    <small>
+                        AKTİF DOMAIN
+                    </small>
+
+
+                    <strong
+                        id="activeDomainCount">
+
+                        0
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🛡️
+                </div>
+
+
+                <div>
+
+                    <small>
+                        HESAP DURUMU
+                    </small>
+
+
+                    <strong>
+                        AKTİF
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOMAIN SECTION -->
+
+        <section class="dashboard-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        YÖNETİM
+                    </span>
+
+
+                    <h2>
+                        Domainlerim
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="index.html"
+                    class="section-action">
+
+                    + Yeni Domain
+
+                </a>
+
+            </div>
+
+
+            <div
+                id="domainsList"
+                class="domains-list">
+
+
+                <!-- JS BURAYA DOMAINLERİ EKLEYECEK -->
+
+
+            </div>
+
+
+            <div
+                id="emptyDomains"
+                class="empty-domains">
+
+
+                <div class="empty-icon">
+                    🌐
+                </div>
+
+
+                <h3>
+                    Henüz domainin yok
+                </h3>
+
+
+                <p>
+                    İlk domainini aramaya başla.
+                </p>
+
+
+                <a
+                    href="index.html"
+                    class="empty-button">
+
+                    Domain Ara →
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACCOUNT -->
+
+        <section class="dashboard-account">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        HESAP
+                    </span>
+
+
+                    <h2>
+                        Hesap Bilgileri
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="account-info">
+
+
+                <div class="account-item">
+
+                    <small>
+                        AD SOYAD
+                    </small>
+
+
+                    <strong
+                        id="accountName">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+
+                <div class="account-item">
+
+                    <small>
+                        E-POSTA
+                    </small>
+
+
+                    <strong
+                        id="accountEmail">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+
+                <div class="account-item">
+
+                    <small>
+                        DURUM
+                    </small>
+
+
+                    <strong class="account-active">
+
+                        ● AKTİF
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        src="js/dashboard.js">
+
+    </script>
+
+</body>
+
+  </html>
