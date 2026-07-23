@@ -3865,3 +3865,202 @@ select {
     }
 
 }
+/* =========================================
+   DOMAIN SEARCH RESULT
+========================================= */
+
+.domain-result-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 16px 18px;
+
+    border: 1px solid rgba(
+        139,
+        92,
+        246,
+        0.35
+    );
+
+    border-radius: 13px;
+
+    background:
+        rgba(
+            20,
+            20,
+            35,
+            0.9
+        );
+
+    box-shadow:
+        0 10px 35px
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+
+    animation:
+        domainResultAppear
+        0.3s
+        ease;
+
+}
+
+
+.domain-result-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.domain-result-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 11px;
+
+    background:
+        rgba(
+            139,
+            92,
+            246,
+            0.13
+        );
+
+    font-size: 19px;
+
+}
+
+
+.domain-result-info strong {
+
+    display: block;
+
+    color: white;
+
+    font-size: 14px;
+
+}
+
+
+.domain-result-info span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #4ade80;
+
+    font-size: 11px;
+
+}
+
+
+.add-domain-button {
+
+    padding: 11px 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #6d28d9
+        );
+
+    color: white;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.add-domain-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            124,
+            58,
+            237,
+            0.35
+        );
+
+}
+
+
+@keyframes domainResultAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .domain-result-card {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+    }
+
+
+    .add-domain-button {
+
+        width: 100%;
+
+    }
+
+   }
